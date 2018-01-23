@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#3a3a3b</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="divide_line">#b9b6b7</color>
+    <color name="cart_color">#6c6c6c</color>
+    <color name="red_cart">#FE3824</color>
+
+
+</resources>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ShoppingCarDemo</string>
+    <string name="toolbar_edit">编辑</string>
+    <string name="toolbar_tv">购物车</string>
+</resources>

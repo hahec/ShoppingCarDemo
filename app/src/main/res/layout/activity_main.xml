@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.goddragonfish.shoppingcardemo.MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="购物车"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divide_line"/>
+
+
+
+    <ExpandableListView
+        android:id="@+id/expandableListView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@null"
+        android:scrollbars="none" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divide_line"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/cb_select_all"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="15dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="15dp"
+            android:text="全选"
+            android:textColor="#333333"
+            android:textSize="15sp" />
+
+        <!--编辑前的窗口-->
+        <RelativeLayout
+            android:id="@+id/before_etc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:gravity="end"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_settlement"
+                android:layout_width="95dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right"
+                android:background="#FE3824"
+                android:text="结算(0)"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/btn_settlement"
+                android:orientation="vertical"
+                android:id="@+id/linearLayout">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/linearLayout"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignStart="@+id/linearLayout"
+                        android:text="合计:¥  "
+                        android:textColor="#333333"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tv_all_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="120"
+                        android:textColor="#FE3824"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="总额:¥  "
+                        android:textColor="#333333"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="250"
+                        android:textColor="#FE3824"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="立减:¥  "
+                        android:textColor="#333333"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="130"
+                        android:textColor="#FE3824"
+                        android:textSize="15sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!--编辑后的窗口-->
+        <LinearLayout
+            android:id="@+id/after_etc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:visibility="gone"
+            android:gravity="end"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="70dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/cart"
+                android:text="分享"
+                android:textColor="@color/cart_color"
+                />
+
+            <Button
+                android:layout_width="70dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/cart"
+                android:text="移入关注"
+                android:textColor="@color/cart_color"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/delete"
+                android:layout_width="70dp"
+                android:layout_height="35dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/red_cart"
+                android:text="删除"
+                android:textColor="@color/red_cart"
+                android:textSize="16sp" />
+    </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
